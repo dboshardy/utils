@@ -1,0 +1,12 @@
+[Unit]
+Description='run nightly'
+RefuseManualStart=no
+RefuseManualStop=no
+
+[Timer]
+Unit=compute-saver.service
+OnCalendar=*-*-* 03:59:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

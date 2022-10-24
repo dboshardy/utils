@@ -1,0 +1,13 @@
+# a systemd service that runs compute-saver.sh every night at 11:59pm
+[Unit]
+Description=Compute Saver
+After=network.target
+
+[Service]
+Type=simple
+User=jupyter
+EnvironmentFile=$HOME/systemd/compute-saver.conf
+ExecStart=/bin/bash $HOME/systemd/compute-saver.sh
+
+[Install]
+WantedBy=timers.target
