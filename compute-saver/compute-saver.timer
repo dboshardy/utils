@@ -5,7 +5,7 @@ RefuseManualStop=no
 
 [Timer]
 Unit=compute-saver.service
-OnCalendar=*-*-* 03:59:00
+OnCalendar=*-*-* 01..05:59:00
 Persistent=true
 
 [Install]
